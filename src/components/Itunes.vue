@@ -1,8 +1,10 @@
 <template>
+    <!-- <Searchinput /> -->
     <form @submit.prevent="searchItunes(searchText)" id="form">
-        <input type="text" name="search" id="search" v-model="searchText">
+        <input type="search" name="search" id="search" v-model="searchText">
         <button type="submit" @click="searchItunes(searchText)" class="search-btn">Search</button>
     </form>
+
     <div class="loader" v-if="loading"></div>
     <div v-if="albums.results">
         <h2 class="results-header">Showing results for {{ searchText }} Albums ({{ albums.resultCount }})</h2>
@@ -19,6 +21,8 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
 import type { ItunesType, Result } from '../types/types.ts'
+// import Searchinput from './Searchinput.vue';
+import { ItunesSearch } from './services/ItunesAPI';
 
 const searchText = ref('');
 let albumList = reactive([]) as unknown as Result[]
@@ -26,18 +30,16 @@ let albums = reactive({}) as ItunesType
 let loading = ref(false)
 
 
-async function searchItunes(search: string) : Promise<void>{
+async function searchItunes(search: string) {
     loading.value = true
     try {
-        let response = await fetch(`http://itunes.apple.com/search?term=${searchText.value}&entity=album&attribute=allArtistTerm`)
-        albums = await response.json()
-        console.log(albumList)
+        albums = await ItunesSearch(search)
         albumList = await albums.results
+        console.log(albumList)
     } catch (err) {
         console.log(err, 'an error occured')
     } finally { 
         loading.value = false;
-        searchText.value = '';
     }
 }
 </script>
