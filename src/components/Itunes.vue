@@ -29,43 +29,7 @@
             <div v-else class="placeholder">
                 <div>
                     <h3>No search yettyyo</h3>
-                    <!-- <div class="albums" v-for="album in albumList">
-                        <img :src="album.artworkUrl100" alt="artworkUrl100" width="80px" height="80px" class="artist-img">
-                        <div class="artist-desc">
-                            <div class="artist-name"><span>Artist: {{ album.artistName }}</span></div>
-                            <div class="artist-album"><span>Album: {{ album.collectionCensoredName }}</span></div>
-                            <div class="view-artist">
-                                <a :href="album.artistViewUrl" target="_blank" class="artist-url">View Artist</a><br>
-                                <a :href="album.collectionViewUrl" target="_blank" class="album-url">View Album</a>
-                            </div>
-                            <div class="released">Released on:{{ album.releaseDate}}</div>
-                        </div>
-                    </div>
-                    <div class="albums">
-                        <img src="../images/androgynous-avatar-non-binary-queer-person (1).jpg" alt="artworkUrl100" width="80px" height="80px" class="artist-img">
-                        <div class="artist-desc">
-                            <div class="artist-name"><span>Artist: Davido</span></div>
-                            <div class="artist-album"><span>Album: TimeLess</span></div>
-                            <div class="view-artist">
-                                <a href="#" target="_blank" class="artist-url">View Artist</a><br>
-                                <a href="#" target="_blank" class="album-url">View Album</a>
-                            </div>
-                            <div class="released">Released: 2024</div>
-                        </div>
-                    </div>
-                    <div class="albums">
-                        <img src="../images/androgynous-avatar-non-binary-queer-person (1).jpg" alt="artworkUrl100" width="80px" height="80px" class="artist-img">
-                        <div class="artist-desc">
-                            <div class="artist-name"><span>Artist: Davido</span></div>
-                            <div class="artist-album"><span>Album: TimeLess</span></div>
-                            <div class="view-artist">
-                                <a href="#" target="_blank" class="artist-url">View Artist</a><br>
-                                <a href="#" target="_blank" class="album-url">View Album</a>
-                            </div>
-                            <div class="released">Released: 2024</div>
-                        </div>
-                    </div> -->
-                   </div>
+                </div>
             </div>
         </section>
     </section>

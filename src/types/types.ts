@@ -25,5 +25,4 @@ export interface Result {
     currency:               string;
     releaseDate:            Date;
     primaryGenreName:       string;
-    }
-
+}
