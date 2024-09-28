@@ -36,7 +36,7 @@
 </template>
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
-import type { ItunesType, Result } from '../types/types.ts'
+import type { ItunesType, Result } from '../types/types'
 import { ItunesSearch } from './services/ItunesAPI';
 
 const searchText = ref('');
@@ -48,7 +48,7 @@ let loading = ref(false)
 async function searchItunes(search: string) {
     loading.value = true
     try {
-        albums = await ItunesSearch(search)
+        albums = await ItunesSearch(searchText.value)
         albumList = await albums.results
         console.log(albumList)
     } catch (err) {
