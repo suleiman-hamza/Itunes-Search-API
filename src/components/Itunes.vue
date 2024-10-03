@@ -29,7 +29,15 @@
             <div v-else class="placeholder">
                 <div>
                     <h3>No search yettyyo</h3>
-                    <RouterLink to="/test" >Test</RouterLink>
+                    <Button @click="shaddcn">Click me</Button>
+                    <Accordion type="single" collapsible>
+                        <AccordionItem value="item-1">
+                        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+                        <AccordionContent>
+                            Yes. It adheres to the WAI-ARIA design pattern.
+                        </AccordionContent>
+                        </AccordionItem>
+                    </Accordion>
                 </div>
             </div>
         </section>
@@ -37,6 +45,8 @@
 </template>
 <script setup lang="ts">
 import { reactive, ref } from 'vue';
+import { Button } from '@/components/ui/button'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import type { ItunesType, Result } from '../types/types'
 import { ItunesSearch } from './services/ItunesAPI';
 
@@ -45,6 +55,9 @@ let albumList = reactive([]) as unknown as Result[]
 let albums = reactive({}) as ItunesType
 let loading = ref(false)
 
+function shaddcn() {
+    console.log('hey!, shadcn-vue')
+}
 
 async function searchItunes(search: string) {
     loading.value = true
