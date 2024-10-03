@@ -29,6 +29,7 @@
             <div v-else class="placeholder">
                 <div>
                     <h3>No search yettyyo</h3>
+                    <RouterLink to="/test" >Test</RouterLink>
                 </div>
             </div>
         </section>

@@ -8,6 +8,7 @@ import Itunes from './components/Itunes.vue'
     <Headbar />
     <Itunes />
   </main>
+  <RouterView></RouterView>
 </template>
 
 <style scoped>

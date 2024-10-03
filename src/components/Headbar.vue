@@ -4,6 +4,9 @@
         <p>Mini project by <a href="https://suleiman-hamza.github.io">_suleiman_hue</a>😍</p>
     </header>
 </template>
+<script lang="ts">
+import { RouterLink } from 'vue-router';
+</script>
 
 <style lang="css" scoped>
 .header {
